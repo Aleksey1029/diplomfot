@@ -94,10 +94,6 @@ export const LoginPage = () => {
 				<AppButton buttonText={'Войти'} type={'submit'} />
 			</form>
 			<div className='RememberAdmin'>
-				<label>
-					<AppInput type={'checkbox'} placeholder={'Запомнить'} />
-					Запомнить
-				</label>
 				<Link to='#'>Забыли пароль?</Link>
 			</div>
 			<div className='registration'>

@@ -29,6 +29,9 @@ export const ProfileHeader = () => {
 				<img src='./img/users/balle.jpg' alt='alex' />
 				<div className='user__description'>
 					<h1 className='user__name'>{user?.name}</h1>
+					<p className='user__name'> {user?.mail}</p>
+					<p className='user__name'> {user?.city}</p>
+					<p className='user__name'> {user?.phone_number}</p>
 					<div className='user__info'></div>
 				</div>
 				<div className='buttons-wrapper'>

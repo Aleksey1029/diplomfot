@@ -17,6 +17,7 @@ export const SCMainPage = styled.div`
 		margin-top: 20px;
 
 		h1 {
+			padding-top: 10px;
 			font-size: 28px;
 			margin-bottom: 20px;
 			color: #2e6bff;
@@ -44,17 +45,19 @@ export const SCMainPage = styled.div`
 
 			.buton {
 				border-radius: 5px;
-				font-size: 15px; 
+				font-size: 15px;
 			}
 
 			.team {
 				display: flex;
 				align-items: center;
+				/* flex-direction: column; */
 				gap: 20px;
 				padding: 10px;
 				border-radius: 8px;
 				cursor: pointer;
 				transition: background-color 0.3s ease;
+
 
 				img {
 					width: 50px;

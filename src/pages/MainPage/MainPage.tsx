@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Header } from '../../components/UI/Header/Header'
 import { SCMainPage } from './MainPage.styled'
 import { useGetallAreasByIdQuery } from '../../store/api/bigAreasApi'
 
-const MatchCard = ({ match }) => {
+const MatchCard = ({ match }: MatchResult) => {
 	const [isFavorite, setIsFavorite] = useState(false)
 
-	const addToFavorites = match => {
+	const addToFavorites = (match) => {
 		let favorites = JSON.parse(localStorage.getItem('favorites')) || []
 
-		// Проверяем, есть ли уже матч в списке избранных по его id
 		const existingMatch = favorites.find(
 			favoriteMatch => favoriteMatch.fixture.id === match.fixture.id
 		)
 
 		if (!existingMatch) {
-			// Если матча еще нет в списке избранных, добавляем его
 			favorites.push(match)
 			localStorage.setItem('favorites', JSON.stringify(favorites))
 			console.log('Матч добавлен в избранное:', match)
@@ -89,8 +88,13 @@ const MatchCard = ({ match }) => {
 				</span>
 			</div>
 			<button className='button' onClick={handleToggleFavorite}>
-				{isFavorite ? 'Добавить в избранное' : 'Добавить в избранное'}
+				{isFavorite ? 'Добавлено ✔' : 'Добавить в избранное'}
 			</button>
+			<div>
+				<Link to={`/match/${match.fixture.id}`}>
+					<button className='detail'>Подробнее</button>
+				</Link>
+			</div>
 		</div>
 	)
 }
@@ -105,7 +109,7 @@ export const MainPage = () => {
 			<main className='Main'></main>
 			<div className='Matches'>
 				<h1>Список матчей</h1>
-				{!!data?.response &&
+				{data?.response &&
 					data.response.length &&
 					data?.response.map(match => (
 						<div className='block-matches' key={match.fixture.id}>

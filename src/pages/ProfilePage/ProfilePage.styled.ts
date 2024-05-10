@@ -296,7 +296,7 @@ export const SCProfilePage = styled.div`
 
 @media (max-width: 1750px) {
   .ProfileHeader {
-    height: 300px;
+    height: 340px;
   }
 
   .user__block {

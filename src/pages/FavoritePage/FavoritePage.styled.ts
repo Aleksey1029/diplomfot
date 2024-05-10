@@ -17,6 +17,7 @@ export const SCFavoritePage = styled.div`
 		margin-top: 20px;
 
 		h1 {
+			padding: 10px;
 			font-size: 28px;
 			margin-bottom: 20px;
 			color: #2e6bff;
