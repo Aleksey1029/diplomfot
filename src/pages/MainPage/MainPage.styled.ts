@@ -58,7 +58,6 @@ export const SCMainPage = styled.div`
 				cursor: pointer;
 				transition: background-color 0.3s ease;
 
-
 				img {
 					width: 50px;
 					height: 50px;
