@@ -123,10 +123,7 @@ export const SCFavoritePage = styled.div`
 		align-items: center;
 		padding: 30px 0px;
 	}
-	
-	
-	
-	
+
 	.match-card {
 		display: flex;
 		justify-content: space-between;
