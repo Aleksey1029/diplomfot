@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Header } from '../../components/UI/Header/Header'
 import { SCFavoritePage } from './FavoritePage.styled'
+import { Link } from 'react-router-dom'
 
 export const FavoritePage = () => {
 	const [favoriteMatches, setFavoriteMatches] = useState(
@@ -88,7 +89,12 @@ export const FavoritePage = () => {
 						))}
 					</div>
 				) : (
-					<p>Нет избранных матчей</p>
+					<div className='under_text'>
+						<p>Нет избранных матчей</p>
+						<Link to={'/main'}>
+							<button className='buton'>Добавить матчи</button>
+						</Link>
+					</div>
 				)}
 			</div>
 		</SCFavoritePage>

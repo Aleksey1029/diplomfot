@@ -114,6 +114,19 @@ export const SCFavoritePage = styled.div`
 		}
 	}
 
+	.under_text {
+		color: black;
+		font-size: 26px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 0px;
+	}
+	
+	
+	
+	
 	.match-card {
 		display: flex;
 		justify-content: space-between;

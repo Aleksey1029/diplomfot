@@ -1,20 +1,19 @@
 import styled from 'styled-components'
 
 export const SCDetailsPage = styled.div`
-	// Общие стили для главной страницы
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	/* align-items: center; */
 	padding: 20px;
 	background-color: #f0f0f0;
 	color: #333;
 	font-family: 'Arial', sans-serif;
 
-	// Стили для блока с матчами
 	.Matches {
 		width: 100%;
-		max-width: 1200px;
+		/* max-width: 1200px; */
 		margin-top: 20px;
+		padding: 10px;
 
 		h1 {
 			font-size: 28px;
@@ -26,7 +25,7 @@ export const SCDetailsPage = styled.div`
 
 		.match-card {
 			display: flex;
-			flex-wrap: wrap; /* Добавляем wrap для адаптивности */
+			flex-wrap: wrap;
 			align-items: center;
 			justify-content: space-between;
 			background-color: #fff;
@@ -35,7 +34,6 @@ export const SCDetailsPage = styled.div`
 			margin-bottom: 20px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			transition: all 0.3s ease;
-			/* cursor: pointer; */
 
 			&:hover {
 				transform: translateY(-3px);
@@ -71,7 +69,7 @@ export const SCDetailsPage = styled.div`
 					border-radius: 20px;
 					border: 1px solid gray;
 					font-family: 'Arial', sans-serif;
-					transition: all 0.3s ease; /* Добавляем transition */
+					transition: all 0.3s ease;
 				}
 
 				span {
@@ -82,7 +80,7 @@ export const SCDetailsPage = styled.div`
 					border-radius: 20px;
 					border: 1px solid gray;
 					font-family: 'Arial', sans-serif;
-					transition: all 0.3s ease; /* Добавляем transition */
+					transition: all 0.3s ease;
 				}
 
 				p:hover {
@@ -113,11 +111,16 @@ export const SCDetailsPage = styled.div`
 					color: #666;
 					font-family: 'Arial', sans-serif;
 				}
+
+				span {
+					color: #2e6bff;
+					font-weight: 600;
+					/* font-size: 20px; */
+				}
 			}
 		}
 	}
 
-	// Медиа-запросы для адаптивности
 	@media (max-width: 768px) {
 		padding: 10px;
 
